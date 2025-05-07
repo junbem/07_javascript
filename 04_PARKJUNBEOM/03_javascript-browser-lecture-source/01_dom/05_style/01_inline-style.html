@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>inline style</h1>
+    <p>
+      HTMLElement.prototype.style 프로퍼티는 setter와 getter가 모두 존재하는
+      접근자 프로퍼티로 요소 노드의 인라인 스타일을 취득하거나 추가 또는
+      변경한다.
+    </p>
+    <div style="color: white">DIV AREA</div>
+    <script>
+      const $area = document.querySelector("div");
+      // 인라인 스타일 취득 - CSSStyleDeclaration 타입의 객체 반환
+      console.log($area.style);
+      // 인라인 스타일 추가
+      // 단위 지정이 필요한 프로퍼티의 값은 반드시 단위 지정
+      $area.style.width = "100px";
+      $area.style.height = "100px";
+      // CSSStyleDeclaration 객체의 프로퍼티 : 카멜 케이스
+      // CSS 프로퍼티 : 케밥 케이스
+      $area.style.backgroundColor = "lightgray"; // 마침표 표기법
+      $area.style["background-color"] = "red"; // 대괄호 표기법
+      $area.innerHTML = "<s>DIV AREA</s>";
+    </script>
+  </body>
+</html>
